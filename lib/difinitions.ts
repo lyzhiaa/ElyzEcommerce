@@ -1,16 +1,20 @@
-export type ProductType = {
+export type ProductType={
   id: number;
   name: string;
   price: number;
-  category: string;
   desc: string;
-  image: string
-};
+  image: string;
+  category: string;
+  seller: string;
+  quantity:number;
+  onClick?: () => void
+}
 
 export type CartProductType = {
 	name: string;
 	image: string;
 	price: number;
+  desc?: string;
 	id: number;
 	onClick?: () => void;
 };
@@ -21,13 +25,13 @@ export type ProductDetailType={
   },
   searchParams: { [key: string]: string | string[] | undefined }
 }
+export const placeHolderImage="https://i0.wp.com/sunrisedaycamp.org/wp-content/uploads/2020/10/placeholder.png?sl=1"
 
 export type ImageType={
   id:number,
   image:string,
   name:string
 }
-
 export type ProductResponse = {
   name:string,
   image:string,
